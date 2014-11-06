@@ -1,0 +1,6 @@
+[submodule "bundle/syntax_glsl"]
+	path = bundle/syntax_glsl
+	url = https://github.com/beyondmarc/glsl.vim.git
+[submodule "bundle/vim-glsl"]
+	path = bundle/vim-glsl
+	url = https://github.com/tikhomirov/vim-glsl
