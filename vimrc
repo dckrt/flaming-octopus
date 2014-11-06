@@ -3,6 +3,10 @@
 
 " For multi-byte character support (CJK support, for example):
 "set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
+
+" Activate Pathogen plugin management
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
        
 set tabstop=4       " Number of spaces that a <Tab> in the file counts for.
  
