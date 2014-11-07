@@ -5,7 +5,7 @@
 "set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
 
 " Activate Pathogen plugin management
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
        
 set tabstop=4       " Number of spaces that a <Tab> in the file counts for.
@@ -80,5 +80,7 @@ set ruler           " Show the line and column number of the cursor position,
 filetype plugin indent on
 syntax on
 
+set pastetoggle=<F12>
+
 " Switch between source and header file
-map <F4> :e %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.cpp,<CR>
+map <F4> :FSHere<CR>
