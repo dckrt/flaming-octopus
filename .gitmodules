@@ -7,3 +7,6 @@
 [submodule "bundle/vim-fswitch"]
 	path = bundle/vim-fswitch
 	url = https://github.com/derekwyatt/vim-fswitch.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
