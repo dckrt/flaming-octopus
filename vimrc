@@ -85,4 +85,4 @@ set pastetoggle=<F12>
 " Switch between source and header file
 map <F4> :FSHere<CR>
 
-let g:flake8_ignore="E501"
+let g:syntastic_python_flake8_post_args='--ignore=E501'
