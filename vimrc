@@ -85,4 +85,4 @@ set pastetoggle=<F12>
 " Switch between source and header file
 map <F4> :FSHere<CR>
 
-let g:pep8_ignore="E501"
+let g:flake8_ignore="E501"
