@@ -8,9 +8,9 @@
 call pathogen#infect()
 call pathogen#helptags()
        
-set tabstop=4       " Number of spaces that a <Tab> in the file counts for.
+set tabstop=2       " Number of spaces that a <Tab> in the file counts for.
  
-set shiftwidth=4    " Number of spaces to use for each step of (auto)indent.
+set shiftwidth=2    " Number of spaces to use for each step of (auto)indent.
  
 set expandtab       " Use the appropriate number of spaces to insert a <Tab>.
                     " Spaces are used in indents with the '>' and '<' commands
@@ -86,3 +86,19 @@ set pastetoggle=<F12>
 map <F4> :FSHere<CR>
 
 let g:syntastic_python_flake8_post_args='--ignore=E501'
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+"let g:airline_powerline_fonts = 1
+
+"set statusline=%t       "tail of the filename
+"set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+"set statusline+=%{&ff}] "file format
+"set statusline+=%h      "help file flag
+"set statusline+=%m      "modified flag
+"set statusline+=%r      "read only flag
+"set statusline+=%y      "filetype
+"set statusline+=%=      "left/right separator
+"set statusline+=%c,     "cursor column
+"set statusline+=%l/%L   "cursor line/total lines
+"set statusline+=\ %P    "percent through file
