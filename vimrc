@@ -76,29 +76,36 @@ set ruler           " Show the line and column number of the cursor position,
                     " Any other value is illegal.
  
 "set mouse=a         " Enable the use of the mouse.
- 
+
 filetype plugin indent on
 syntax on
-
 set pastetoggle=<F12>
 
 " Switch between source and header file
+augroup mycppfiles
+  au!
+  au BufEnter *.h let b:fswitchdst  = 'cpp,cc,C'
+  au BufEnter *.cc let b:fswitchdst = 'h'
+  au BufEnter *.h let b:fswitchlocs = 'reg:/include/src/,reg:/include.*/src/'
+augroup END
+
 map <F4> :FSHere<CR>
 
 let g:syntastic_python_flake8_post_args='--ignore=E501'
+let g:syntastic_cpp_include_dirs = [ '/usr/include/wx-2.8', '/usr/lib64/wx/include/gtk2-unicode-release-2.8', '/usr/include/freetype2/']
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-"let g:airline_powerline_fonts = 1
-
-"set statusline=%t       "tail of the filename
-"set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-"set statusline+=%{&ff}] "file format
-"set statusline+=%h      "help file flag
-"set statusline+=%m      "modified flag
-"set statusline+=%r      "read only flag
-"set statusline+=%y      "filetype
-"set statusline+=%=      "left/right separator
-"set statusline+=%c,     "cursor column
-"set statusline+=%l/%L   "cursor line/total lines
-"set statusline+=\ %P    "percent through file
+let mapleader = ","
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+let g:easytags_async = 1
+let g:easytags_auto_update = 0
+let g:easytags_auto_highlight = 0
